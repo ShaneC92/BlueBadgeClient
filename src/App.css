@@ -3,6 +3,6 @@
 }
 
 body {
-  background-color: #9bbcbd;
-  background-image: url("https://www.transparenttextures.com/patterns/ag-square.png");
+  background-color: #9bbcbd !important;
+  background-image: url("https://www.transparenttextures.com/patterns/ag-square.png") !important;
 }

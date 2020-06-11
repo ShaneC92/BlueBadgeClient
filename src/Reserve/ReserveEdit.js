@@ -7,7 +7,7 @@ const ReserveEdit = (props) => {
     const [editArrival, setEditArrival] = useState(props.reservationToUpdate.arrivalTime);
     const [editDesc, setEditDesc] = useState(props.reservationToUpdate.description);
     const [editShampoo, setEditShampoo] = useState(props.reservationToUpdate.shampoo);
-    const [editShave, setEditeShave] = useState(props.reservationToUpdate.shave);
+    const [editShave, setEditShave] = useState(props.reservationToUpdate.shave);
 
     const reserveUpdate = (event, reserve) => {
         event.preventDefault();
@@ -47,7 +47,7 @@ const ReserveEdit = (props) => {
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor='shave'>Shave</Label>
-                        <Input type='select' name='shave' value={editShave} onChange={(e) => setEditeShave(e.target.value)}>
+                        <Input type='select' name='shave' value={editShave} onChange={(e) => setEditShave(e.target.value)}>
                             <option value='Yes'>Yes</option>
                             <option value='No'>No</option>
                         </Input>

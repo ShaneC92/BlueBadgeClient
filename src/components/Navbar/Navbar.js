@@ -11,19 +11,14 @@ const Sitebar = (props) => {
         setIsOpen(newIsOpen);
     }
 
-
-
     return(
         <Navbar className='NavStyle'>
             <NavbarBrand style={{color: 'white', textDecoration: 'underline'}} href='/'>Hair Salon</NavbarBrand>
-            <NavbarToggler onClick={toggle} />
-            <Collapse isOpen={isOpen} navBar>
                 <Nav className='ml-auto' navbar>
                     <NavItem>
                         <Button onClick={props.clickLogout}>Logout</Button>
                     </NavItem>
                 </Nav>
-            </Collapse>
         </Navbar>
     )
 }
