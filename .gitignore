@@ -10,6 +10,8 @@
 
 # production
 /build
+# Remove this if adding react.Router
+/static.json
 
 # misc
 .DS_Store

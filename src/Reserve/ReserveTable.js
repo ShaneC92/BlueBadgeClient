@@ -1,10 +1,11 @@
 import React from 'react';
 import {Table, Button} from 'reactstrap';
+import APIURL from '../helpers/environment';
 
 
 const ReserveTable = (props) => {
     const deleteReservation = (reservation) => {
-        fetch(`http://localhost:3000/reserve/${reservation.id}`, {
+        fetch(`${APIURL}/reserve/${reservation.id}`, {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',

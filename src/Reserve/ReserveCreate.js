@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Button, Form, FormGroup, Label, Input} from 'reactstrap';
+import APIURL from '../helpers/environment';
 
 
 const ReserveCreate = (props) => {
@@ -10,7 +11,7 @@ const ReserveCreate = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('http://localhost:3000/reserve', {
+        fetch(`${APIURL}/reserve`, {
             method: 'POST',
             body: JSON.stringify({arrivalTime: arrivalTime, description: description, shampoo: shampoo, shave: shave}),
             headers: new Headers({

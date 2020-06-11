@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody} from 'reactstrap';
+import APIURL from '../helpers/environment';
 
 
 const ReserveEdit = (props) => {
@@ -10,7 +11,7 @@ const ReserveEdit = (props) => {
 
     const reserveUpdate = (event, reserve) => {
         event.preventDefault();
-        fetch(`http://localhost:3000/reserve/${props.reservationToUpdate.id}`, {
+        fetch(`${APIURL}/reserve/${props.reservationToUpdate.id}`, {
             method: 'PUT',
             body: JSON.stringify({reserve: {arrivalTime: editArrival, description: editDesc, shampoo: editShampoo, shave: editShave}}),
             headers: new Headers ({

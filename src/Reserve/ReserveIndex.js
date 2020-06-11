@@ -3,6 +3,7 @@ import {Container, Row, Col} from 'reactstrap';
 import ReserveCreate from './ReserveCreate';
 import ReserveEdit from './ReserveEdit';
 import ReserveTable from './ReserveTable';
+import APIURL from '../helpers/environment';
 
 const ReserveIndex = (props) => {
     const [reservations, setReservations] = useState([]);
@@ -10,7 +11,7 @@ const ReserveIndex = (props) => {
     const [reservationToUpdate, setReservationToUpdate] = useState({});
 
     const fetchReservations = () => {
-        fetch('http://localhost:3000/reserve', {
+        fetch(`${APIURL}/reserve`, {
             method: 'GET',
             headers: new Headers ({
                 'Content-Type': 'application/json',
