@@ -9,7 +9,6 @@ const ReserveCreate = (props) => {
     const [shampoo, setShampoo] = useState('');
     const [shave, setShave] = useState('');
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
         fetch(`${APIURL}/reserve`, {
@@ -41,26 +40,54 @@ const ReserveCreate = (props) => {
             <Form onSubmit={handleSubmit}>
                 <FormGroup style={fontColor}>
                     <Label htmlFor='arrivalTime'>Arrival Time</Label>
-                    <Input name='arrivalTime' value={arrivalTime} onChange={(e) => setArrivalTime(e.target.value)} />
+                    <Input 
+                        name='arrivalTime' 
+                        value={arrivalTime} 
+                        onChange={(e) => setArrivalTime(e.target.value)} 
+                    />
                 </FormGroup>
                 <FormGroup style={fontColor}>
-                    <Label htmlFor='description'>What are we doing on this visit<br />(i.e. Haircut, Trim)</Label>
-                    <Input htmlFor='description' value={description} onChange={(e) => setDescription(e.target.value)} />
+                    <Label htmlFor='description'>
+                        What are we doing on this visit
+                        <br />
+                        (i.e. Haircut, Trim)
+                    </Label>
+                    <Input 
+                        htmlFor='description' 
+                        value={description} 
+                        onChange={(e) => setDescription(e.target.value)}
+                    />
                 </FormGroup>
                 <FormGroup style={fontColor}>
                     <Label htmlFor='shampoo'>Shampoo</Label>
-                    <Input type='select' name='shampoo' value={shampoo} onChange={(e) => setShampoo(e.target.value)}>
-                    <option></option>
-                    <option value='Yes'>Yes</option>
-                    <option value='No'>No</option>
+                    <Input 
+                        type='select' 
+                        name='shampoo' 
+                        value={shampoo} 
+                        onChange={(e) => setShampoo(e.target.value)}>
+                        <option></option>
+                        <option value='Yes'>
+                            Yes
+                        </option>
+                        <option value='No'>
+                            No
+                        </option>
                 </Input>
                 </FormGroup>
                 <FormGroup style={fontColor}>
                     <Label htmlFor='shave'>Shave</Label>
-                    <Input type='select' name='shave' value={shave} onChange={(e) => setShave(e.target.value)}>
+                    <Input 
+                        type='select' 
+                        name='shave' 
+                        value={shave} 
+                        onChange={(e) => setShave(e.target.value)}>
                         <option></option>
-                        <option value='Yes'>Yes</option>
-                        <option value='No'>No</option>
+                        <option value='Yes'>
+                            Yes
+                        </option>
+                        <option value='No'>
+                            No
+                        </option>
                     </Input>
                 </FormGroup>
                 <Button type='submit'>Make a Reservation!</Button>

@@ -32,19 +32,38 @@ const Signup = (props) => {
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
                     <Label htmlFor='firstName'>First Name:</Label>
-                    <Input onChange={(e) => setFirstName(e.target.value)} name='firstName' value={firstName} />
+                    <Input 
+                        onChange={(e) => setFirstName(e.target.value)} name='firstName' 
+                        value={firstName}
+                        required 
+                    />
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor='lastName'>Last Name:</Label>
-                    <Input onChange={(e) => setLastName(e.target.value)} name='lastName' value={lastName} />
+                    <Input 
+                        onChange={(e) => setLastName(e.target.value)} name='lastName' 
+                        value={lastName} 
+                        required
+                    />
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor='email'>Email:</Label>
-                    <Input onChange={(e) => setEmail(e.target.value)} name='email' value={email} />
+                    <Input 
+                        onChange={(e) => setEmail(e.target.value)} name='email' 
+                        value={email}
+                        required
+                    />
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor='password'>Password:</Label>
-                    <Input onChange={(e) => setPassword(e.target.value)} name='password' value={password} minLength='5' maxLength='15' />
+                    <Input 
+                        onChange={(e) => setPassword(e.target.value)} name='password' 
+                        required
+                        value={password}
+                        minLength='5' 
+                        maxLength='15' 
+                        type='password'
+                    />
                 </FormGroup>
                 <Button style={{color: 'black'}} type='submit'>Signup</Button>
             </Form>
