@@ -27,8 +27,8 @@ const ReserveEdit = (props) => {
 
     return(
         <Modal isOpen={true}>
-            <ModalHeader>Make a Reservation</ModalHeader>
-            <ModalBody>
+            <ModalHeader style={{backgroundColor: '#564f6f'}}>Make a Reservation</ModalHeader>
+            <ModalBody style={{backgroundColor: '#564f6f'}}>
                 <Form onSubmit={reserveUpdate}>
                     <FormGroup>
                         <Label htmlFor='arrivalTime'>Schedule Time:</Label>

@@ -1,0 +1,30 @@
+.mainDiv {
+    color: white;
+}
+
+.Picture {
+    height: 250px;
+    width: 350px;
+}
+
+hr.new1 {
+    border: 1px solid white;
+}
+
+.SalonTitle {
+    font-size: 40px;
+    font-family: cursive;
+}
+
+.SalonTitle span{
+    font-family: cursive;
+    font-size: 45px;
+    text-decoration: underline;
+}
+
+.SalonDtls {
+    font-size: 18px;
+    width: 75%;
+    margin: auto;
+    padding: 10px;
+}

@@ -5,6 +5,7 @@ import ReserveEdit from './ReserveEdit';
 import ReserveTable from './ReserveTable';
 import APIURL from '../helpers/environment';
 
+
 const ReserveIndex = (props) => {
     const [reservations, setReservations] = useState([]);
     const [updateActive, setUpdateActive] = useState(false);
@@ -39,13 +40,13 @@ const ReserveIndex = (props) => {
 
     useEffect(() => {
         fetchReservations();
-    })
+    }, [])
 
     return(
         <Container>
             <Row>
                 <Col md='3'>
-                    <ReserveCreate fetchReservations={fetchReservations} token={props.token} />
+                    <ReserveCreate fetchReservations={fetchReservations} token={props.token}/>
                 </Col>
                 <Col md='9'>
                     <ReserveTable reservations={reservations} editUpdateReservation={editUpdateReservation} updateOn={updateOn} fetchReservations={fetchReservations} token={props.token} />

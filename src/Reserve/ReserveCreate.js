@@ -9,6 +9,7 @@ const ReserveCreate = (props) => {
     const [shampoo, setShampoo] = useState('');
     const [shave, setShave] = useState('');
 
+
     const handleSubmit = (e) => {
         e.preventDefault();
         fetch(`${APIURL}/reserve`, {
@@ -30,19 +31,23 @@ const ReserveCreate = (props) => {
         })
     }
 
+    const fontColor = {
+        color: 'white',
+    }
+
     return(
         <>
-            <h3>Make a Reservation</h3>
+            <h3 style={fontColor}>Make a Reservation</h3>
             <Form onSubmit={handleSubmit}>
-                <FormGroup>
+                <FormGroup style={fontColor}>
                     <Label htmlFor='arrivalTime'>Arrival Time</Label>
                     <Input name='arrivalTime' value={arrivalTime} onChange={(e) => setArrivalTime(e.target.value)} />
                 </FormGroup>
-                <FormGroup>
+                <FormGroup style={fontColor}>
                     <Label htmlFor='description'>What are we doing on this visit<br />(i.e. Haircut, Trim)</Label>
                     <Input htmlFor='description' value={description} onChange={(e) => setDescription(e.target.value)} />
                 </FormGroup>
-                <FormGroup>
+                <FormGroup style={fontColor}>
                     <Label htmlFor='shampoo'>Shampoo</Label>
                     <Input type='select' name='shampoo' value={shampoo} onChange={(e) => setShampoo(e.target.value)}>
                     <option></option>
@@ -50,7 +55,7 @@ const ReserveCreate = (props) => {
                     <option value='No'>No</option>
                 </Input>
                 </FormGroup>
-                <FormGroup>
+                <FormGroup style={fontColor}>
                     <Label htmlFor='shave'>Shave</Label>
                     <Input type='select' name='shave' value={shave} onChange={(e) => setShave(e.target.value)}>
                         <option></option>

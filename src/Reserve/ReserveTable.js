@@ -15,16 +15,20 @@ const ReserveTable = (props) => {
         .then(() => props.fetchReservations())
     }
 
+    const fontColor = {
+        color: 'white',
+    }
+
     const reservationMapper = () => {
         return props.reservations.map((reservation, index) => {
             return(
-                <tr key={index}>
+                <tr key={index} style={fontColor}>
                     <th scope='row'>{reservation.arrivalTime}</th>
                     <td>{reservation.description}</td>
                     <td>{reservation.shampoo}</td>
                     <td>{reservation.shave}</td>
                     <td>
-                        <Button color='warning' onClick={() => {props.editUpdateReservation(reservation); props.updateOn()}}>Update</Button>
+                        <Button color='primary' onClick={() => {props.editUpdateReservation(reservation); props.updateOn()}}>Update</Button>
                         <Button color='danger' onClick={() => {deleteReservation(reservation)}}>Delete</Button>
                     </td>
                 </tr>
@@ -34,11 +38,11 @@ const ReserveTable = (props) => {
 
     return(
         <>
-            <h3>Reservations</h3>
+            <h3 style={fontColor}>Reservations</h3>
             <hr />
             <Table striped>
                 <thead>
-                    <tr>
+                    <tr style={fontColor}>
                         <th>Arrival Time</th>
                         <th>Description</th>
                         <th>Shampoo</th>

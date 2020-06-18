@@ -19,7 +19,6 @@ const Login = (props) => {
         ).then((data) => {
             props.updateToken(data.sessionToken);
         })
-        
     }
 
 
